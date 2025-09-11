@@ -1,0 +1,5 @@
+DADOS: 
+ NOME: Alberto 
+IDADE: 35 
+ALTURA: 1.65
+

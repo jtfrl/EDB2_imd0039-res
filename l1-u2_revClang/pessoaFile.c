@@ -14,7 +14,7 @@ int verOpenFile(FILE* a){
 int main(){
     const char* fname="/workspaces/EDB2_imd0039-res/l1-u2_revClang/dados_1.txt";
 
-    FILE* abrir=fopen(fname, "r");
+    FILE* abrir=fopen(fname, "w+");
 
     verOpenFile(abrir);
 
