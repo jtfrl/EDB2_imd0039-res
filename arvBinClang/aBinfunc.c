@@ -31,9 +31,6 @@ Arv *arv_libera(Arv *a){
 }
 
 
-
-
-
 bool arv_pertence(Arv *a, char c){
   if(is_arvVazia(a))
     return 0;  /* Árvore vazia: não encontrou */
@@ -58,14 +55,48 @@ int arv_pertence(Arv *a, char c)
 }
 */
 
-void arv_imprime(Arv *a){
-  if(!is_arvVazia(a)){
-    printf("%c ", a->info);  /* mostra raiz */
-    arv_imprime(a->esq);     /* mostra sae */
-    arv_imprime(a->dir);     /* mostra sad */
+//implementação de funções de nível e de altura
+
+int getHeight(Arv* arv){
+  if(is_arvVazia(arv)) return 0;
+  else{
+    int lh=getHeight(arv->esq); //mede a altura com base em ambas
+    int rh=getHeight(arv->dir);
+
+    if(lh>rh) return lh+1;
+    else return rh+1;
   }
+
+}
+
+int getLevel(Arv* arv){
+  return getHeight(arv)+1;
 }
 
 
+void addSpace(int count){
+  //int level=getLevel(arv);
+  for(int i=0;i<count;i++){
+    printf("  ");
+  }
+}
+
+void arv_imprime(Arv *a, int level){
+  if(!is_arvVazia(a)){
+    addSpace(level);
+    printf("%c ", a->info);  /* mostra raiz */
+    //printf("'.' '.'\n");
+    //addSpace(a);
+
+    arv_imprime(a->esq, getLevel(a)+1);     /* mostra sae */
+    arv_imprime(a->dir, getLevel(a)+1);     /* mostra sad */
+  
+  }
+      printf("\n");
+}
+
+void fullPrint(Arv *a){
+  arv_imprime(a, 0);
+}
 
 
