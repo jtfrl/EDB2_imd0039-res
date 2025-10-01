@@ -52,9 +52,11 @@ int main(void) {
     emOrdem(raiz);
     printf("\n\n");
 
+    //_________
     printf("\nITEM A  | Em-ordem após remoções: ");
     emOrdem(raiz_a);
     printf("\n\n");
+    //_________
 
     liberarArvore(raiz);
     liberarArvore(raiz_a);
