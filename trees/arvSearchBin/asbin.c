@@ -50,7 +50,7 @@ int main(void) {
     emOrdem(raiz);
     printf("\n\n");
 
-    printf("\nITEM A | Em-ordem após remoções: ");
+    printf("\nITEM A  | Em-ordem após remoções: ");
     emOrdem(raiz_a);
     printf("\n\n");
 
