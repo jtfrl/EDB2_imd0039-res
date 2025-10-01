@@ -38,7 +38,8 @@ int main(void) {
     raiz = remover(raiz, 1);
     raiz = remover(raiz, 14);
     raiz = remover(raiz, 3);
-    
+
+    //_________
     //item a)
    
     raiz_a = remover(raiz_a, 10);
