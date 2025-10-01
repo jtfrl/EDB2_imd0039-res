@@ -45,6 +45,7 @@ int main(void) {
     raiz_a = remover(raiz_a, 10);
     raiz_a = remover(raiz_a, 25);
     raiz_a = remover(raiz_a, 50);
+     //_________
 
     
     printf("\nEm-ordem após remoções: ");
